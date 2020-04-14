@@ -2,37 +2,109 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  height: 56px;
+  background-color: #212529;
+  color: white;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  /* justify-content: space-evenly; */
+  font-size: 18px;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-container{
+  margin-right: 25px;
+  margin-left: 55vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown-button{
+  color: white;
+  background-color: #fec503;
+  border-radius: 5px;
+    font-size: 18px;
+}
+
+.header-logo {
+  width: 175px;
+  color: #fec503;
+  margin-left: 25px;
+  justify-content: flex-start;
+}
+
+.desktop-links{
+  display: none;
+}
+
+.dropdown-menu {
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  top: 56px;
+  background-color: #444445;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 33px;
+  text-align: left;
+  border-top: 1px solid black;
+}
+
+.dropdown-menu span:hover{
+  color: #fec503;
+}
+
+.body-component {
+  height: calc(100vh - 125px);
+  background-color: white;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @media(min-width: 500px){
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  .header-logo{
+    margin-left: 25px;
+  }
+  .dropdown-button{
+    margin-right: 25px;
+  }
+} */
+
+@media(min-width: 992px){
+  
+  .header-logo{
+    width: 200px;
+  }
+  
+  .dropdown-button, .button-container{
+    display:none;
+  }
+
+  .dropdown-menu{
+    display: none;
+  }
+
+  .desktop-links{
+    width: 50%;
+    display:flex;
+    justify-content: space-around;
+    background-color: transparent;
+  }
+  .desktop-links span{
+    margin: 0 10px;
+  }
+  .desktop-links span:hover{
+    color: #fec503;
   }
 }
